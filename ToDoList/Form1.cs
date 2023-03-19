@@ -14,7 +14,7 @@ namespace ToDoList
     {
         public Form1()
         {
-            InitializeComponent();
+            InitializeComponent(); //start
         }
     }
 }
