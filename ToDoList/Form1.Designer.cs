@@ -60,6 +60,7 @@
             this.closeAt = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.status = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.addTaskBtn = new System.Windows.Forms.Button();
+            this.deleteTaskBtn = new System.Windows.Forms.Button();
             this.tasksTC.SuspendLayout();
             this.newTabPage.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.tasksNewDG)).BeginInit();
@@ -393,11 +394,23 @@
             this.addTaskBtn.UseVisualStyleBackColor = true;
             this.addTaskBtn.Click += new System.EventHandler(this.addTaskBtn_Click);
             // 
+            // deleteTaskBtn
+            // 
+            this.deleteTaskBtn.Location = new System.Drawing.Point(26, 75);
+            this.deleteTaskBtn.Margin = new System.Windows.Forms.Padding(4);
+            this.deleteTaskBtn.Name = "deleteTaskBtn";
+            this.deleteTaskBtn.Size = new System.Drawing.Size(189, 28);
+            this.deleteTaskBtn.TabIndex = 3;
+            this.deleteTaskBtn.Text = "Удалить задачу";
+            this.deleteTaskBtn.UseVisualStyleBackColor = true;
+            this.deleteTaskBtn.Click += new System.EventHandler(this.deleteTaskBtn_Click);
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1111, 620);
+            this.Controls.Add(this.deleteTaskBtn);
             this.Controls.Add(this.addTaskBtn);
             this.Controls.Add(this.tasksTC);
             this.Name = "Form1";
@@ -442,6 +455,7 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn closeAt;
         private System.Windows.Forms.DataGridViewTextBoxColumn status;
         private System.Windows.Forms.Button addTaskBtn;
+        private System.Windows.Forms.Button deleteTaskBtn;
     }
 }
 

@@ -78,5 +78,46 @@ namespace ToDoList
 
             return null;
         }
+
+        private void deleteTaskBtn_Click(object sender, EventArgs e)
+        {
+            Result deletResult = null;
+
+            DataGridView selectedDataGridView = this.GetDataGrinViewOnTabControl(tasksTC.SelectedTab);
+            if (selectedDataGridView.SelectedRows.Count > 0)
+            {
+                DataGridViewRow selectedRow = selectedDataGridView.SelectedRows[0];
+                int taskId = (int)selectedRow.Cells[0].Value;
+
+                if (taskId > 0)
+                {
+                    deletResult = Task.DeleteById(taskId);
+
+                }
+            }
+
+            MessageBox.Show(
+                deletResult != null ? deletResult.Message : "Не выбрана задача для удаления.",
+                "Результат удаления",
+                MessageBoxButtons.OK,
+                MessageBoxIcon.Information,
+                MessageBoxDefaultButton.Button1
+            );
+
+            List<Task> allTasks = Task.GetAllTasks(this.authUser);
+            TabPage allTasksTabPage = tasksTC.TabPages.Cast<TabPage>().ToList().Find(x => x.Name == "allTabPage");
+            DataGridView allDataGridView = this.GetDataGrinViewOnTabControl(allTasksTabPage, "tasksAllDG");
+            this.DrawTasks(allTasks, allDataGridView);
+
+            List<Task> newTasks = Task.GetAllTasks(this.authUser, Task.STATUS_NEW);
+            TabPage newTasksTabPage = tasksTC.TabPages.Cast<TabPage>().ToList().Find(x => x.Name == "newTabPage");
+            DataGridView newDataGridView = this.GetDataGrinViewOnTabControl(newTasksTabPage, "tasksNewDG");
+            this.DrawTasks(newTasks, newDataGridView);
+
+            List<Task> closeTasks = Task.GetAllTasks(this.authUser, Task.STATUS_CLOSE);
+            TabPage closeTasksTabPage = tasksTC.TabPages.Cast<TabPage>().ToList().Find(x => x.Name == "closeTabPage");
+            DataGridView closeDataGridView = this.GetDataGrinViewOnTabControl(closeTasksTabPage, "tasksCloseDG");
+            this.DrawTasks(closeTasks, closeDataGridView);
+        }
     }
 }
