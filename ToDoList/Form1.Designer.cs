@@ -1,4 +1,5 @@
-﻿namespace ToDoList
+﻿
+namespace ToDoList
 {
     partial class Form1
     {
@@ -28,12 +29,23 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle13 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle14 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle15 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle16 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle17 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle18 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle5 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle6 = new System.Windows.Forms.DataGridViewCellStyle();
+            this.addTaskBtn = new System.Windows.Forms.Button();
+            this.tasksAllDG = new System.Windows.Forms.DataGridView();
+            this.id = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.title = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.createdAt = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.expiredAt = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.closeAt = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.status = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.deleteTaskBtn = new System.Windows.Forms.Button();
+            this.taskEditBtn = new System.Windows.Forms.Button();
+            this.closeTaskBtn = new System.Windows.Forms.Button();
             this.tasksTC = new System.Windows.Forms.TabControl();
             this.newTabPage = new System.Windows.Forms.TabPage();
             this.tasksNewDG = new System.Windows.Forms.DataGridView();
@@ -52,44 +64,165 @@
             this.dataGridViewTextBoxColumn5 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dataGridViewTextBoxColumn6 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.allTabPage = new System.Windows.Forms.TabPage();
-            this.tasksAllDG = new System.Windows.Forms.DataGridView();
-            this.id = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.title = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.createdAt = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.expiredAt = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.closeAt = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.status = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.addTaskBtn = new System.Windows.Forms.Button();
-            this.deleteTaskBtn = new System.Windows.Forms.Button();
-            this.taskEditBtn = new System.Windows.Forms.Button();
-            this.closeTaskBtn = new System.Windows.Forms.Button();
+            ((System.ComponentModel.ISupportInitialize)(this.tasksAllDG)).BeginInit();
             this.tasksTC.SuspendLayout();
             this.newTabPage.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.tasksNewDG)).BeginInit();
             this.closeTabPage.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.tasksCloseDG)).BeginInit();
             this.allTabPage.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.tasksAllDG)).BeginInit();
             this.SuspendLayout();
+            // 
+            // addTaskBtn
+            // 
+            this.addTaskBtn.Location = new System.Drawing.Point(12, 12);
+            this.addTaskBtn.Name = "addTaskBtn";
+            this.addTaskBtn.Size = new System.Drawing.Size(142, 23);
+            this.addTaskBtn.TabIndex = 0;
+            this.addTaskBtn.Text = "Добавить задачу";
+            this.addTaskBtn.UseVisualStyleBackColor = true;
+            this.addTaskBtn.Click += new System.EventHandler(this.addTaskBtn_Click);
+            // 
+            // tasksAllDG
+            // 
+            this.tasksAllDG.AllowUserToAddRows = false;
+            this.tasksAllDG.AllowUserToDeleteRows = false;
+            this.tasksAllDG.BackgroundColor = System.Drawing.SystemColors.Window;
+            dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle1.BackColor = System.Drawing.SystemColors.Control;
+            dataGridViewCellStyle1.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            dataGridViewCellStyle1.ForeColor = System.Drawing.SystemColors.WindowText;
+            dataGridViewCellStyle1.SelectionBackColor = System.Drawing.Color.SeaShell;
+            dataGridViewCellStyle1.SelectionForeColor = System.Drawing.SystemColors.WindowText;
+            dataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.tasksAllDG.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle1;
+            this.tasksAllDG.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.tasksAllDG.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.id,
+            this.title,
+            this.createdAt,
+            this.expiredAt,
+            this.closeAt,
+            this.status});
+            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle2.BackColor = System.Drawing.SystemColors.Window;
+            dataGridViewCellStyle2.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            dataGridViewCellStyle2.ForeColor = System.Drawing.SystemColors.ControlText;
+            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.Color.SeaShell;
+            dataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.ControlText;
+            dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.tasksAllDG.DefaultCellStyle = dataGridViewCellStyle2;
+            this.tasksAllDG.GridColor = System.Drawing.Color.MistyRose;
+            this.tasksAllDG.Location = new System.Drawing.Point(0, 2);
+            this.tasksAllDG.MultiSelect = false;
+            this.tasksAllDG.Name = "tasksAllDG";
+            this.tasksAllDG.ReadOnly = true;
+            this.tasksAllDG.RowHeadersVisible = false;
+            this.tasksAllDG.RowHeadersWidth = 51;
+            this.tasksAllDG.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
+            this.tasksAllDG.Size = new System.Drawing.Size(634, 441);
+            this.tasksAllDG.TabIndex = 1;
+            this.tasksAllDG.CellMouseDoubleClick += new System.Windows.Forms.DataGridViewCellMouseEventHandler(this.tasksAllDG_CellMouseDoubleClick);
+            // 
+            // id
+            // 
+            this.id.HeaderText = "Id";
+            this.id.MinimumWidth = 6;
+            this.id.Name = "id";
+            this.id.ReadOnly = true;
+            this.id.Visible = false;
+            this.id.Width = 125;
+            // 
+            // title
+            // 
+            this.title.HeaderText = "Title";
+            this.title.MinimumWidth = 6;
+            this.title.Name = "title";
+            this.title.ReadOnly = true;
+            this.title.Width = 125;
+            // 
+            // createdAt
+            // 
+            this.createdAt.HeaderText = "Date Create";
+            this.createdAt.MinimumWidth = 6;
+            this.createdAt.Name = "createdAt";
+            this.createdAt.ReadOnly = true;
+            this.createdAt.Width = 125;
+            // 
+            // expiredAt
+            // 
+            this.expiredAt.HeaderText = "Date Expired";
+            this.expiredAt.MinimumWidth = 6;
+            this.expiredAt.Name = "expiredAt";
+            this.expiredAt.ReadOnly = true;
+            this.expiredAt.Width = 125;
+            // 
+            // closeAt
+            // 
+            this.closeAt.HeaderText = "Date Close";
+            this.closeAt.MinimumWidth = 6;
+            this.closeAt.Name = "closeAt";
+            this.closeAt.ReadOnly = true;
+            this.closeAt.Width = 125;
+            // 
+            // status
+            // 
+            this.status.HeaderText = "Status";
+            this.status.MinimumWidth = 6;
+            this.status.Name = "status";
+            this.status.ReadOnly = true;
+            this.status.Width = 125;
+            // 
+            // deleteTaskBtn
+            // 
+            this.deleteTaskBtn.Location = new System.Drawing.Point(12, 41);
+            this.deleteTaskBtn.Name = "deleteTaskBtn";
+            this.deleteTaskBtn.Size = new System.Drawing.Size(142, 23);
+            this.deleteTaskBtn.TabIndex = 2;
+            this.deleteTaskBtn.Text = "Удалить задачу";
+            this.deleteTaskBtn.UseVisualStyleBackColor = true;
+            this.deleteTaskBtn.Click += new System.EventHandler(this.deleteTaskBtn_Click);
+            // 
+            // taskEditBtn
+            // 
+            this.taskEditBtn.Location = new System.Drawing.Point(12, 70);
+            this.taskEditBtn.Name = "taskEditBtn";
+            this.taskEditBtn.Size = new System.Drawing.Size(142, 23);
+            this.taskEditBtn.TabIndex = 3;
+            this.taskEditBtn.Text = "Редактировать задачу";
+            this.taskEditBtn.UseVisualStyleBackColor = true;
+            this.taskEditBtn.Click += new System.EventHandler(this.taskEditBtn_Click);
+            // 
+            // closeTaskBtn
+            // 
+            this.closeTaskBtn.Location = new System.Drawing.Point(12, 99);
+            this.closeTaskBtn.Name = "closeTaskBtn";
+            this.closeTaskBtn.Size = new System.Drawing.Size(142, 23);
+            this.closeTaskBtn.TabIndex = 4;
+            this.closeTaskBtn.Text = "Закрыть задачу";
+            this.closeTaskBtn.UseVisualStyleBackColor = true;
+            this.closeTaskBtn.Click += new System.EventHandler(this.closeTaskBtn_Click);
             // 
             // tasksTC
             // 
             this.tasksTC.Controls.Add(this.newTabPage);
             this.tasksTC.Controls.Add(this.closeTabPage);
             this.tasksTC.Controls.Add(this.allTabPage);
-            this.tasksTC.Location = new System.Drawing.Point(242, 30);
+            this.tasksTC.Location = new System.Drawing.Point(175, 12);
+            this.tasksTC.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.tasksTC.Name = "tasksTC";
             this.tasksTC.SelectedIndex = 0;
-            this.tasksTC.Size = new System.Drawing.Size(857, 578);
-            this.tasksTC.TabIndex = 6;
+            this.tasksTC.Size = new System.Drawing.Size(643, 470);
+            this.tasksTC.TabIndex = 5;
             // 
             // newTabPage
             // 
             this.newTabPage.Controls.Add(this.tasksNewDG);
-            this.newTabPage.Location = new System.Drawing.Point(4, 25);
+            this.newTabPage.Location = new System.Drawing.Point(4, 22);
+            this.newTabPage.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.newTabPage.Name = "newTabPage";
-            this.newTabPage.Padding = new System.Windows.Forms.Padding(3);
-            this.newTabPage.Size = new System.Drawing.Size(849, 549);
+            this.newTabPage.Padding = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.newTabPage.Size = new System.Drawing.Size(635, 444);
             this.newTabPage.TabIndex = 0;
             this.newTabPage.Text = "Текущие задачи";
             this.newTabPage.UseVisualStyleBackColor = true;
@@ -99,14 +232,14 @@
             this.tasksNewDG.AllowUserToAddRows = false;
             this.tasksNewDG.AllowUserToDeleteRows = false;
             this.tasksNewDG.BackgroundColor = System.Drawing.SystemColors.Window;
-            dataGridViewCellStyle13.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle13.BackColor = System.Drawing.SystemColors.Control;
-            dataGridViewCellStyle13.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            dataGridViewCellStyle13.ForeColor = System.Drawing.SystemColors.WindowText;
-            dataGridViewCellStyle13.SelectionBackColor = System.Drawing.Color.SeaShell;
-            dataGridViewCellStyle13.SelectionForeColor = System.Drawing.SystemColors.WindowText;
-            dataGridViewCellStyle13.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.tasksNewDG.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle13;
+            dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle3.BackColor = System.Drawing.SystemColors.Control;
+            dataGridViewCellStyle3.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            dataGridViewCellStyle3.ForeColor = System.Drawing.SystemColors.WindowText;
+            dataGridViewCellStyle3.SelectionBackColor = System.Drawing.Color.SeaShell;
+            dataGridViewCellStyle3.SelectionForeColor = System.Drawing.SystemColors.WindowText;
+            dataGridViewCellStyle3.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.tasksNewDG.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle3;
             this.tasksNewDG.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.tasksNewDG.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.dataGridViewTextBoxColumn7,
@@ -115,25 +248,26 @@
             this.dataGridViewTextBoxColumn10,
             this.dataGridViewTextBoxColumn11,
             this.dataGridViewTextBoxColumn12});
-            dataGridViewCellStyle14.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle14.BackColor = System.Drawing.SystemColors.Window;
-            dataGridViewCellStyle14.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            dataGridViewCellStyle14.ForeColor = System.Drawing.SystemColors.ControlText;
-            dataGridViewCellStyle14.SelectionBackColor = System.Drawing.Color.SeaShell;
-            dataGridViewCellStyle14.SelectionForeColor = System.Drawing.SystemColors.ControlText;
-            dataGridViewCellStyle14.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
-            this.tasksNewDG.DefaultCellStyle = dataGridViewCellStyle14;
+            dataGridViewCellStyle4.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle4.BackColor = System.Drawing.SystemColors.Window;
+            dataGridViewCellStyle4.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            dataGridViewCellStyle4.ForeColor = System.Drawing.SystemColors.ControlText;
+            dataGridViewCellStyle4.SelectionBackColor = System.Drawing.Color.SeaShell;
+            dataGridViewCellStyle4.SelectionForeColor = System.Drawing.SystemColors.ControlText;
+            dataGridViewCellStyle4.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.tasksNewDG.DefaultCellStyle = dataGridViewCellStyle4;
             this.tasksNewDG.GridColor = System.Drawing.Color.MistyRose;
             this.tasksNewDG.Location = new System.Drawing.Point(0, 2);
-            this.tasksNewDG.Margin = new System.Windows.Forms.Padding(4);
             this.tasksNewDG.MultiSelect = false;
             this.tasksNewDG.Name = "tasksNewDG";
             this.tasksNewDG.ReadOnly = true;
             this.tasksNewDG.RowHeadersVisible = false;
             this.tasksNewDG.RowHeadersWidth = 51;
             this.tasksNewDG.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.tasksNewDG.Size = new System.Drawing.Size(845, 543);
+            this.tasksNewDG.Size = new System.Drawing.Size(634, 441);
             this.tasksNewDG.TabIndex = 2;
+            this.tasksNewDG.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.tasksNewDG_CellContentClick);
+            this.tasksNewDG.CellMouseDoubleClick += new System.Windows.Forms.DataGridViewCellMouseEventHandler(this.tasksNewDG_CellMouseDoubleClick);
             // 
             // dataGridViewTextBoxColumn7
             // 
@@ -187,10 +321,11 @@
             // closeTabPage
             // 
             this.closeTabPage.Controls.Add(this.tasksCloseDG);
-            this.closeTabPage.Location = new System.Drawing.Point(4, 25);
+            this.closeTabPage.Location = new System.Drawing.Point(4, 22);
+            this.closeTabPage.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.closeTabPage.Name = "closeTabPage";
-            this.closeTabPage.Padding = new System.Windows.Forms.Padding(3);
-            this.closeTabPage.Size = new System.Drawing.Size(849, 549);
+            this.closeTabPage.Padding = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.closeTabPage.Size = new System.Drawing.Size(635, 444);
             this.closeTabPage.TabIndex = 1;
             this.closeTabPage.Text = "Закрытые задачи";
             this.closeTabPage.UseVisualStyleBackColor = true;
@@ -200,14 +335,14 @@
             this.tasksCloseDG.AllowUserToAddRows = false;
             this.tasksCloseDG.AllowUserToDeleteRows = false;
             this.tasksCloseDG.BackgroundColor = System.Drawing.SystemColors.Window;
-            dataGridViewCellStyle15.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle15.BackColor = System.Drawing.SystemColors.Control;
-            dataGridViewCellStyle15.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            dataGridViewCellStyle15.ForeColor = System.Drawing.SystemColors.WindowText;
-            dataGridViewCellStyle15.SelectionBackColor = System.Drawing.Color.SeaShell;
-            dataGridViewCellStyle15.SelectionForeColor = System.Drawing.SystemColors.WindowText;
-            dataGridViewCellStyle15.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.tasksCloseDG.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle15;
+            dataGridViewCellStyle5.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle5.BackColor = System.Drawing.SystemColors.Control;
+            dataGridViewCellStyle5.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            dataGridViewCellStyle5.ForeColor = System.Drawing.SystemColors.WindowText;
+            dataGridViewCellStyle5.SelectionBackColor = System.Drawing.Color.SeaShell;
+            dataGridViewCellStyle5.SelectionForeColor = System.Drawing.SystemColors.WindowText;
+            dataGridViewCellStyle5.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.tasksCloseDG.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle5;
             this.tasksCloseDG.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.tasksCloseDG.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.dataGridViewTextBoxColumn1,
@@ -216,25 +351,25 @@
             this.dataGridViewTextBoxColumn4,
             this.dataGridViewTextBoxColumn5,
             this.dataGridViewTextBoxColumn6});
-            dataGridViewCellStyle16.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle16.BackColor = System.Drawing.SystemColors.Window;
-            dataGridViewCellStyle16.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            dataGridViewCellStyle16.ForeColor = System.Drawing.SystemColors.ControlText;
-            dataGridViewCellStyle16.SelectionBackColor = System.Drawing.Color.SeaShell;
-            dataGridViewCellStyle16.SelectionForeColor = System.Drawing.SystemColors.ControlText;
-            dataGridViewCellStyle16.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
-            this.tasksCloseDG.DefaultCellStyle = dataGridViewCellStyle16;
+            dataGridViewCellStyle6.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle6.BackColor = System.Drawing.SystemColors.Window;
+            dataGridViewCellStyle6.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            dataGridViewCellStyle6.ForeColor = System.Drawing.SystemColors.ControlText;
+            dataGridViewCellStyle6.SelectionBackColor = System.Drawing.Color.SeaShell;
+            dataGridViewCellStyle6.SelectionForeColor = System.Drawing.SystemColors.ControlText;
+            dataGridViewCellStyle6.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.tasksCloseDG.DefaultCellStyle = dataGridViewCellStyle6;
             this.tasksCloseDG.GridColor = System.Drawing.Color.MistyRose;
             this.tasksCloseDG.Location = new System.Drawing.Point(0, 2);
-            this.tasksCloseDG.Margin = new System.Windows.Forms.Padding(4);
             this.tasksCloseDG.MultiSelect = false;
             this.tasksCloseDG.Name = "tasksCloseDG";
             this.tasksCloseDG.ReadOnly = true;
             this.tasksCloseDG.RowHeadersVisible = false;
             this.tasksCloseDG.RowHeadersWidth = 51;
             this.tasksCloseDG.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.tasksCloseDG.Size = new System.Drawing.Size(845, 543);
+            this.tasksCloseDG.Size = new System.Drawing.Size(634, 441);
             this.tasksCloseDG.TabIndex = 2;
+            this.tasksCloseDG.CellMouseDoubleClick += new System.Windows.Forms.DataGridViewCellMouseEventHandler(this.tasksCloseDG_CellMouseDoubleClick);
             // 
             // dataGridViewTextBoxColumn1
             // 
@@ -288,175 +423,58 @@
             // allTabPage
             // 
             this.allTabPage.Controls.Add(this.tasksAllDG);
-            this.allTabPage.Location = new System.Drawing.Point(4, 25);
+            this.allTabPage.Location = new System.Drawing.Point(4, 22);
+            this.allTabPage.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.allTabPage.Name = "allTabPage";
-            this.allTabPage.Size = new System.Drawing.Size(849, 549);
+            this.allTabPage.Size = new System.Drawing.Size(635, 444);
             this.allTabPage.TabIndex = 2;
             this.allTabPage.Text = "Список задач";
             this.allTabPage.UseVisualStyleBackColor = true;
             // 
-            // tasksAllDG
+            // TasksForm
             // 
-            this.tasksAllDG.AllowUserToAddRows = false;
-            this.tasksAllDG.AllowUserToDeleteRows = false;
-            this.tasksAllDG.BackgroundColor = System.Drawing.SystemColors.Window;
-            dataGridViewCellStyle17.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle17.BackColor = System.Drawing.SystemColors.Control;
-            dataGridViewCellStyle17.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            dataGridViewCellStyle17.ForeColor = System.Drawing.SystemColors.WindowText;
-            dataGridViewCellStyle17.SelectionBackColor = System.Drawing.Color.SeaShell;
-            dataGridViewCellStyle17.SelectionForeColor = System.Drawing.SystemColors.WindowText;
-            dataGridViewCellStyle17.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.tasksAllDG.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle17;
-            this.tasksAllDG.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.tasksAllDG.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
-            this.id,
-            this.title,
-            this.createdAt,
-            this.expiredAt,
-            this.closeAt,
-            this.status});
-            dataGridViewCellStyle18.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle18.BackColor = System.Drawing.SystemColors.Window;
-            dataGridViewCellStyle18.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            dataGridViewCellStyle18.ForeColor = System.Drawing.SystemColors.ControlText;
-            dataGridViewCellStyle18.SelectionBackColor = System.Drawing.Color.SeaShell;
-            dataGridViewCellStyle18.SelectionForeColor = System.Drawing.SystemColors.ControlText;
-            dataGridViewCellStyle18.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
-            this.tasksAllDG.DefaultCellStyle = dataGridViewCellStyle18;
-            this.tasksAllDG.GridColor = System.Drawing.Color.MistyRose;
-            this.tasksAllDG.Location = new System.Drawing.Point(0, 2);
-            this.tasksAllDG.Margin = new System.Windows.Forms.Padding(4);
-            this.tasksAllDG.MultiSelect = false;
-            this.tasksAllDG.Name = "tasksAllDG";
-            this.tasksAllDG.ReadOnly = true;
-            this.tasksAllDG.RowHeadersVisible = false;
-            this.tasksAllDG.RowHeadersWidth = 51;
-            this.tasksAllDG.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.tasksAllDG.Size = new System.Drawing.Size(845, 543);
-            this.tasksAllDG.TabIndex = 1;
-            // 
-            // id
-            // 
-            this.id.HeaderText = "Id";
-            this.id.MinimumWidth = 6;
-            this.id.Name = "id";
-            this.id.ReadOnly = true;
-            this.id.Visible = false;
-            this.id.Width = 125;
-            // 
-            // title
-            // 
-            this.title.HeaderText = "Title";
-            this.title.MinimumWidth = 6;
-            this.title.Name = "title";
-            this.title.ReadOnly = true;
-            this.title.Width = 125;
-            // 
-            // createdAt
-            // 
-            this.createdAt.HeaderText = "Date Create";
-            this.createdAt.MinimumWidth = 6;
-            this.createdAt.Name = "createdAt";
-            this.createdAt.ReadOnly = true;
-            this.createdAt.Width = 125;
-            // 
-            // expiredAt
-            // 
-            this.expiredAt.HeaderText = "Date Expired";
-            this.expiredAt.MinimumWidth = 6;
-            this.expiredAt.Name = "expiredAt";
-            this.expiredAt.ReadOnly = true;
-            this.expiredAt.Width = 125;
-            // 
-            // closeAt
-            // 
-            this.closeAt.HeaderText = "Date Close";
-            this.closeAt.MinimumWidth = 6;
-            this.closeAt.Name = "closeAt";
-            this.closeAt.ReadOnly = true;
-            this.closeAt.Width = 125;
-            // 
-            // status
-            // 
-            this.status.HeaderText = "Status";
-            this.status.MinimumWidth = 6;
-            this.status.Name = "status";
-            this.status.ReadOnly = true;
-            this.status.Width = 125;
-            // 
-            // addTaskBtn
-            // 
-            this.addTaskBtn.Location = new System.Drawing.Point(26, 30);
-            this.addTaskBtn.Margin = new System.Windows.Forms.Padding(4);
-            this.addTaskBtn.Name = "addTaskBtn";
-            this.addTaskBtn.Size = new System.Drawing.Size(189, 28);
-            this.addTaskBtn.TabIndex = 3;
-            this.addTaskBtn.Text = "Добавить задачу";
-            this.addTaskBtn.UseVisualStyleBackColor = true;
-            this.addTaskBtn.Click += new System.EventHandler(this.addTaskBtn_Click);
-            // 
-            // deleteTaskBtn
-            // 
-            this.deleteTaskBtn.Location = new System.Drawing.Point(26, 75);
-            this.deleteTaskBtn.Margin = new System.Windows.Forms.Padding(4);
-            this.deleteTaskBtn.Name = "deleteTaskBtn";
-            this.deleteTaskBtn.Size = new System.Drawing.Size(189, 28);
-            this.deleteTaskBtn.TabIndex = 3;
-            this.deleteTaskBtn.Text = "Удалить задачу";
-            this.deleteTaskBtn.UseVisualStyleBackColor = true;
-            this.deleteTaskBtn.Click += new System.EventHandler(this.deleteTaskBtn_Click);
-            // 
-            // taskEditBtn
-            // 
-            this.taskEditBtn.Location = new System.Drawing.Point(26, 111);
-            this.taskEditBtn.Margin = new System.Windows.Forms.Padding(4);
-            this.taskEditBtn.Name = "taskEditBtn";
-            this.taskEditBtn.Size = new System.Drawing.Size(189, 28);
-            this.taskEditBtn.TabIndex = 7;
-            this.taskEditBtn.Text = "Редактировать задачу";
-            this.taskEditBtn.UseVisualStyleBackColor = true;
-            this.taskEditBtn.Click += new System.EventHandler(this.taskEditBtn_Click);
-            // 
-            // closeTaskBtn
-            // 
-            this.closeTaskBtn.Location = new System.Drawing.Point(26, 147);
-            this.closeTaskBtn.Margin = new System.Windows.Forms.Padding(4);
-            this.closeTaskBtn.Name = "closeTaskBtn";
-            this.closeTaskBtn.Size = new System.Drawing.Size(189, 28);
-            this.closeTaskBtn.TabIndex = 8;
-            this.closeTaskBtn.Text = "Закрыть задачу";
-            this.closeTaskBtn.UseVisualStyleBackColor = true;
-            this.closeTaskBtn.Click += new System.EventHandler(this.closeTaskBtn_Click);
-            // 
-            // Form1
-            // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1111, 620);
+            this.BackColor = System.Drawing.Color.SeaShell;
+            this.ClientSize = new System.Drawing.Size(825, 492);
+            this.Controls.Add(this.tasksTC);
             this.Controls.Add(this.closeTaskBtn);
             this.Controls.Add(this.taskEditBtn);
             this.Controls.Add(this.deleteTaskBtn);
             this.Controls.Add(this.addTaskBtn);
-            this.Controls.Add(this.tasksTC);
-            this.Name = "Form1";
-            this.Text = "Form1";
-            this.Load += new System.EventHandler(this.Form1_Load);
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedDialog;
+            this.MaximizeBox = false;
+            this.Name = "TasksForm";
+            this.Text = "Задачи";
+            this.Load += new System.EventHandler(this.tasksForm_Load);
+            ((System.ComponentModel.ISupportInitialize)(this.tasksAllDG)).EndInit();
             this.tasksTC.ResumeLayout(false);
             this.newTabPage.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.tasksNewDG)).EndInit();
             this.closeTabPage.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.tasksCloseDG)).EndInit();
             this.allTabPage.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.tasksAllDG)).EndInit();
             this.ResumeLayout(false);
 
         }
 
         #endregion
 
+        private System.Windows.Forms.Button addTaskBtn;
+        private System.Windows.Forms.DataGridView tasksAllDG;
+        private System.Windows.Forms.Button deleteTaskBtn;
+        private System.Windows.Forms.Button taskEditBtn;
+        private System.Windows.Forms.Button closeTaskBtn;
         private System.Windows.Forms.TabControl tasksTC;
         private System.Windows.Forms.TabPage newTabPage;
+        private System.Windows.Forms.TabPage closeTabPage;
+        private System.Windows.Forms.TabPage allTabPage;
+        private System.Windows.Forms.DataGridViewTextBoxColumn id;
+        private System.Windows.Forms.DataGridViewTextBoxColumn title;
+        private System.Windows.Forms.DataGridViewTextBoxColumn createdAt;
+        private System.Windows.Forms.DataGridViewTextBoxColumn expiredAt;
+        private System.Windows.Forms.DataGridViewTextBoxColumn closeAt;
+        private System.Windows.Forms.DataGridViewTextBoxColumn status;
         private System.Windows.Forms.DataGridView tasksNewDG;
         private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn7;
         private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn8;
@@ -464,7 +482,6 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn10;
         private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn11;
         private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn12;
-        private System.Windows.Forms.TabPage closeTabPage;
         private System.Windows.Forms.DataGridView tasksCloseDG;
         private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn1;
         private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn2;
@@ -472,18 +489,6 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn4;
         private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn5;
         private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn6;
-        private System.Windows.Forms.TabPage allTabPage;
-        private System.Windows.Forms.DataGridView tasksAllDG;
-        private System.Windows.Forms.DataGridViewTextBoxColumn id;
-        private System.Windows.Forms.DataGridViewTextBoxColumn title;
-        private System.Windows.Forms.DataGridViewTextBoxColumn createdAt;
-        private System.Windows.Forms.DataGridViewTextBoxColumn expiredAt;
-        private System.Windows.Forms.DataGridViewTextBoxColumn closeAt;
-        private System.Windows.Forms.DataGridViewTextBoxColumn status;
-        private System.Windows.Forms.Button addTaskBtn;
-        private System.Windows.Forms.Button deleteTaskBtn;
-        private System.Windows.Forms.Button taskEditBtn;
-        private System.Windows.Forms.Button closeTaskBtn;
     }
 }
 

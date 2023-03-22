@@ -7,8 +7,6 @@ using MySql.Data.MySqlClient;
 using System.Data.Common;
 using System.Security.Cryptography;
 using System.Security.Policy;
-using System.Text;
-using System.Threading.Tasks;
 using System.Data.SqlClient;
 
 namespace ToDoList.Structures
