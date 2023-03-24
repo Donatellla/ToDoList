@@ -97,18 +97,25 @@ namespace ToDoList.Structures
             MySqlConnection conn = DBUtils.GetDBConnection();
             conn.Open();
 
-            string dateClose = "NULL";
+            string sql = "INSERT INTO `tasks` (`id`, `title`, `description`, `created_at`, `expired_at`, `close_at`, `status`, `user_id`) VALUES (NULL, @name, @description, @createdAt, @expiredAt, @close_at, @status, @userId);";
+
+            // Создать объект Command.
+            MySqlCommand cmd = new MySqlCommand();
+            cmd.Parameters.AddWithValue("@name", this.name);
+            cmd.Parameters.AddWithValue("@description", this.description);
+            cmd.Parameters.AddWithValue("@createdAt", this.createdAt.ToString(Task.DATE_FORMAT));
+            cmd.Parameters.AddWithValue("@expiredAt", this.expiredAt.ToString(Task.DATE_FORMAT));
+            
+           /* string dateClose = "NULL";
             if (this.closeAt != null)
             {
                 DateTime dateTimeClose = (DateTime)this.closeAt;
                 dateClose = "'" + dateTimeClose.ToString(Task.DATE_FORMAT) + "'";
-            }
+            }*/
 
-            string sql = "INSERT INTO `tasks` (`id`, `title`, `description`, `created_at`, `expired_at`, `close_at`, `status`, `user_id`) " +
-                "VALUES (NULL, '" + this.name + "', '" + this.description + "', '" + this.createdAt.ToString(Task.DATE_FORMAT) + "', '" + this.expiredAt.ToString(Task.DATE_FORMAT) + "', " + dateClose + ", '" + this.status + "', '" + this.userId + "');";
-
-            // Создать объект Command.
-            MySqlCommand cmd = new MySqlCommand();
+            cmd.Parameters.AddWithValue("@close_at", this.closeAt);
+            cmd.Parameters.AddWithValue("@status", this.status);
+            cmd.Parameters.AddWithValue("@userId", this.userId);
 
             // Сочетать Command с Connection.
             cmd.Connection = conn;
@@ -146,25 +153,26 @@ namespace ToDoList.Structures
             MySqlConnection conn = DBUtils.GetDBConnection();
             conn.Open();
 
-            string dateClose = "NULL";
-            if (this.closeAt != null)
-            {
-                DateTime dateTimeClose = (DateTime)this.closeAt;
-                dateClose = "'" + dateTimeClose.ToString(Task.DATE_FORMAT) + "'";
-            }
-
-            string sql = "UPDATE `tasks` SET " +
-                "`title` = '" + this.name + "', " +
-                "`description` = '" + this.description + "', " +
-                "`created_at` = '" + this.createdAt.ToString(Task.DATE_FORMAT) + "', " +
-                "`expired_at` = '" + this.expiredAt.ToString(Task.DATE_FORMAT) + "', " +
-                "`close_at` = " + dateClose + ", " +
-                "`status` = '" + this.status + "', " +
-                "`user_id` = '" + this.userId + "' " +
-                "WHERE `tasks`.`id` = " + this.id;
+            string sql = "UPDATE `tasks` SET `title` = @name, `description` = @description, `created_at` =  @createdAt,`expired_at` = @expiredAt, `close_at` = @close_at,   `status` = @status, `user_id` = @userId WHERE `tasks`.`id` = @id;";
 
             // Создать объект Command.
             MySqlCommand cmd = new MySqlCommand();
+            cmd.Parameters.AddWithValue("@name", this.name);
+            cmd.Parameters.AddWithValue("@description", this.description);
+            cmd.Parameters.AddWithValue("@createdAt", this.createdAt.ToString(Task.DATE_FORMAT));
+            cmd.Parameters.AddWithValue("@expiredAt", this.expiredAt.ToString(Task.DATE_FORMAT));
+
+            /* string dateClose = "NULL";
+             if (this.closeAt != null)
+             {
+                 DateTime dateTimeClose = (DateTime)this.closeAt;
+                 dateClose = "'" + dateTimeClose.ToString(Task.DATE_FORMAT) + "'";
+             }*/
+
+            cmd.Parameters.AddWithValue("@close_at", this.closeAt);
+            cmd.Parameters.AddWithValue("@status", this.status);
+            cmd.Parameters.AddWithValue("@userId", this.userId);
+            cmd.Parameters.AddWithValue("@id", this.id);
 
             // Сочетать Command с Connection.
             cmd.Connection = conn;
@@ -203,7 +211,7 @@ namespace ToDoList.Structures
             MySqlConnection conn = DBUtils.GetDBConnection();
             conn.Open();
 
-            string sql = "SELECT * FROM `tasks` WHERE user_id = " + user.Id;
+            string sql = "SELECT * FROM `tasks` WHERE user_id = @Id";
 
             if (inputStatus != "")
             {
@@ -212,6 +220,7 @@ namespace ToDoList.Structures
 
             // Создать объект Command.
             MySqlCommand cmd = new MySqlCommand();
+            cmd.Parameters.AddWithValue("@Id", user.Id);
 
             // Сочетать Command с Connection.
             cmd.Connection = conn;
@@ -260,10 +269,11 @@ namespace ToDoList.Structures
             MySqlConnection conn = DBUtils.GetDBConnection();
             conn.Open();
 
-            string sql = "SELECT * FROM `tasks` WHERE id = " + inputId;
+            string sql = "SELECT * FROM `tasks` WHERE id = @inputId";
 
             // Создать объект Command.
             MySqlCommand cmd = new MySqlCommand();
+            cmd.Parameters.AddWithValue("@inputId", inputId);
 
             // Сочетать Command с Connection.
             cmd.Connection = conn;
@@ -323,9 +333,10 @@ namespace ToDoList.Structures
             MySqlConnection conn = DBUtils.GetDBConnection();
             conn.Open();
 
-            string sql = "DELETE FROM `tasks` WHERE `tasks`.`id` = " + id;
+            string sql = "DELETE FROM `tasks` WHERE `tasks`.`id` = @id";
             // Создать объект Command.
             MySqlCommand cmd = new MySqlCommand();
+            cmd.Parameters.AddWithValue("@id", id);
 
             // Сочетать Command с Connection.
             cmd.Connection = conn;

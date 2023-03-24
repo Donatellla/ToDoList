@@ -109,6 +109,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.BackColor = System.Drawing.Color.SeaShell;
             this.ClientSize = new System.Drawing.Size(354, 211);
             this.Controls.Add(this.resultLbl);
             this.Controls.Add(this.addUserBtn);
@@ -117,7 +118,10 @@
             this.Controls.Add(this.passwordTb);
             this.Controls.Add(this.loginLbl);
             this.Controls.Add(this.loginTb);
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedDialog;
+            this.MaximizeBox = false;
             this.Name = "AuthForm";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Авторизация";
             this.ResumeLayout(false);
             this.PerformLayout();

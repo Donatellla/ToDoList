@@ -8,6 +8,8 @@ using System.Data.Common;
 using System.Security.Cryptography;
 using System.Security.Policy;
 using System.Data.SqlClient;
+using static Mysqlx.Notice.SessionStateChanged.Types;
+using static System.Windows.Forms.VisualStyles.VisualStyleElement.StartPanel;
 
 namespace ToDoList.Structures
 {
@@ -76,10 +78,14 @@ namespace ToDoList.Structures
             conn.Open();
 
             this.hash_password = Convert.ToBase64String(MD5.Create().ComputeHash(Encoding.UTF8.GetBytes(this.password)));
-            string sql = "INSERT INTO `users` (`id`, `login`, `password`) VALUES (NULL, '" + this.login + "', '" + this.hash_password + "');";
-
+            
+            string sql = "INSERT INTO `users` (`id`, `login`, `password`) VALUES (NULL, @login, @hash_password);";
+            
             // Создать объект Command.
             MySqlCommand cmd = new MySqlCommand();
+
+            cmd.Parameters.AddWithValue("@login", this.login);
+            cmd.Parameters.AddWithValue("@hash_password", this.hash_password);
 
             // Сочетать Command с Connection.
             cmd.Connection = conn;
@@ -124,10 +130,11 @@ namespace ToDoList.Structures
             MySqlConnection conn = DBUtils.GetDBConnection();
             conn.Open();
 
-            string sql = "SELECT * FROM `users` WHERE login='" + inpuLogin + "'";
+            string sql = "SELECT * FROM `users` WHERE login= @Login";
 
             // Создать объект Command.
             MySqlCommand cmd = new MySqlCommand();
+            cmd.Parameters.AddWithValue("@Login", inpuLogin);
 
             // Сочетать Command с Connection.
             cmd.Connection = conn;

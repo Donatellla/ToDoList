@@ -75,9 +75,10 @@ namespace ToDoList
             // 
             // addTaskBtn
             // 
-            this.addTaskBtn.Location = new System.Drawing.Point(12, 12);
+            this.addTaskBtn.Location = new System.Drawing.Point(13, 17);
+            this.addTaskBtn.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.addTaskBtn.Name = "addTaskBtn";
-            this.addTaskBtn.Size = new System.Drawing.Size(142, 23);
+            this.addTaskBtn.Size = new System.Drawing.Size(189, 28);
             this.addTaskBtn.TabIndex = 0;
             this.addTaskBtn.Text = "Добавить задачу";
             this.addTaskBtn.UseVisualStyleBackColor = true;
@@ -114,13 +115,14 @@ namespace ToDoList
             this.tasksAllDG.DefaultCellStyle = dataGridViewCellStyle2;
             this.tasksAllDG.GridColor = System.Drawing.Color.MistyRose;
             this.tasksAllDG.Location = new System.Drawing.Point(0, 2);
+            this.tasksAllDG.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.tasksAllDG.MultiSelect = false;
             this.tasksAllDG.Name = "tasksAllDG";
             this.tasksAllDG.ReadOnly = true;
             this.tasksAllDG.RowHeadersVisible = false;
             this.tasksAllDG.RowHeadersWidth = 51;
             this.tasksAllDG.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.tasksAllDG.Size = new System.Drawing.Size(634, 441);
+            this.tasksAllDG.Size = new System.Drawing.Size(845, 543);
             this.tasksAllDG.TabIndex = 1;
             this.tasksAllDG.CellMouseDoubleClick += new System.Windows.Forms.DataGridViewCellMouseEventHandler(this.tasksAllDG_CellMouseDoubleClick);
             // 
@@ -175,9 +177,10 @@ namespace ToDoList
             // 
             // deleteTaskBtn
             // 
-            this.deleteTaskBtn.Location = new System.Drawing.Point(12, 41);
+            this.deleteTaskBtn.Location = new System.Drawing.Point(13, 52);
+            this.deleteTaskBtn.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.deleteTaskBtn.Name = "deleteTaskBtn";
-            this.deleteTaskBtn.Size = new System.Drawing.Size(142, 23);
+            this.deleteTaskBtn.Size = new System.Drawing.Size(189, 28);
             this.deleteTaskBtn.TabIndex = 2;
             this.deleteTaskBtn.Text = "Удалить задачу";
             this.deleteTaskBtn.UseVisualStyleBackColor = true;
@@ -185,9 +188,10 @@ namespace ToDoList
             // 
             // taskEditBtn
             // 
-            this.taskEditBtn.Location = new System.Drawing.Point(12, 70);
+            this.taskEditBtn.Location = new System.Drawing.Point(13, 88);
+            this.taskEditBtn.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.taskEditBtn.Name = "taskEditBtn";
-            this.taskEditBtn.Size = new System.Drawing.Size(142, 23);
+            this.taskEditBtn.Size = new System.Drawing.Size(189, 28);
             this.taskEditBtn.TabIndex = 3;
             this.taskEditBtn.Text = "Редактировать задачу";
             this.taskEditBtn.UseVisualStyleBackColor = true;
@@ -195,9 +199,10 @@ namespace ToDoList
             // 
             // closeTaskBtn
             // 
-            this.closeTaskBtn.Location = new System.Drawing.Point(12, 99);
+            this.closeTaskBtn.Location = new System.Drawing.Point(13, 124);
+            this.closeTaskBtn.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.closeTaskBtn.Name = "closeTaskBtn";
-            this.closeTaskBtn.Size = new System.Drawing.Size(142, 23);
+            this.closeTaskBtn.Size = new System.Drawing.Size(189, 28);
             this.closeTaskBtn.TabIndex = 4;
             this.closeTaskBtn.Text = "Закрыть задачу";
             this.closeTaskBtn.UseVisualStyleBackColor = true;
@@ -208,21 +213,21 @@ namespace ToDoList
             this.tasksTC.Controls.Add(this.newTabPage);
             this.tasksTC.Controls.Add(this.closeTabPage);
             this.tasksTC.Controls.Add(this.allTabPage);
-            this.tasksTC.Location = new System.Drawing.Point(175, 12);
-            this.tasksTC.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.tasksTC.Location = new System.Drawing.Point(209, 17);
+            this.tasksTC.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.tasksTC.Name = "tasksTC";
             this.tasksTC.SelectedIndex = 0;
-            this.tasksTC.Size = new System.Drawing.Size(643, 470);
+            this.tasksTC.Size = new System.Drawing.Size(857, 578);
             this.tasksTC.TabIndex = 5;
             // 
             // newTabPage
             // 
             this.newTabPage.Controls.Add(this.tasksNewDG);
-            this.newTabPage.Location = new System.Drawing.Point(4, 22);
-            this.newTabPage.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.newTabPage.Location = new System.Drawing.Point(4, 25);
+            this.newTabPage.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.newTabPage.Name = "newTabPage";
-            this.newTabPage.Padding = new System.Windows.Forms.Padding(2, 2, 2, 2);
-            this.newTabPage.Size = new System.Drawing.Size(635, 444);
+            this.newTabPage.Padding = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.newTabPage.Size = new System.Drawing.Size(849, 549);
             this.newTabPage.TabIndex = 0;
             this.newTabPage.Text = "Текущие задачи";
             this.newTabPage.UseVisualStyleBackColor = true;
@@ -258,13 +263,14 @@ namespace ToDoList
             this.tasksNewDG.DefaultCellStyle = dataGridViewCellStyle4;
             this.tasksNewDG.GridColor = System.Drawing.Color.MistyRose;
             this.tasksNewDG.Location = new System.Drawing.Point(0, 2);
+            this.tasksNewDG.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.tasksNewDG.MultiSelect = false;
             this.tasksNewDG.Name = "tasksNewDG";
             this.tasksNewDG.ReadOnly = true;
             this.tasksNewDG.RowHeadersVisible = false;
             this.tasksNewDG.RowHeadersWidth = 51;
             this.tasksNewDG.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.tasksNewDG.Size = new System.Drawing.Size(634, 441);
+            this.tasksNewDG.Size = new System.Drawing.Size(845, 543);
             this.tasksNewDG.TabIndex = 2;
             this.tasksNewDG.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.tasksNewDG_CellContentClick);
             this.tasksNewDG.CellMouseDoubleClick += new System.Windows.Forms.DataGridViewCellMouseEventHandler(this.tasksNewDG_CellMouseDoubleClick);
@@ -321,11 +327,11 @@ namespace ToDoList
             // closeTabPage
             // 
             this.closeTabPage.Controls.Add(this.tasksCloseDG);
-            this.closeTabPage.Location = new System.Drawing.Point(4, 22);
-            this.closeTabPage.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.closeTabPage.Location = new System.Drawing.Point(4, 25);
+            this.closeTabPage.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.closeTabPage.Name = "closeTabPage";
-            this.closeTabPage.Padding = new System.Windows.Forms.Padding(2, 2, 2, 2);
-            this.closeTabPage.Size = new System.Drawing.Size(635, 444);
+            this.closeTabPage.Padding = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.closeTabPage.Size = new System.Drawing.Size(849, 549);
             this.closeTabPage.TabIndex = 1;
             this.closeTabPage.Text = "Закрытые задачи";
             this.closeTabPage.UseVisualStyleBackColor = true;
@@ -361,13 +367,14 @@ namespace ToDoList
             this.tasksCloseDG.DefaultCellStyle = dataGridViewCellStyle6;
             this.tasksCloseDG.GridColor = System.Drawing.Color.MistyRose;
             this.tasksCloseDG.Location = new System.Drawing.Point(0, 2);
+            this.tasksCloseDG.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.tasksCloseDG.MultiSelect = false;
             this.tasksCloseDG.Name = "tasksCloseDG";
             this.tasksCloseDG.ReadOnly = true;
             this.tasksCloseDG.RowHeadersVisible = false;
             this.tasksCloseDG.RowHeadersWidth = 51;
             this.tasksCloseDG.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.tasksCloseDG.Size = new System.Drawing.Size(634, 441);
+            this.tasksCloseDG.Size = new System.Drawing.Size(845, 543);
             this.tasksCloseDG.TabIndex = 2;
             this.tasksCloseDG.CellMouseDoubleClick += new System.Windows.Forms.DataGridViewCellMouseEventHandler(this.tasksCloseDG_CellMouseDoubleClick);
             // 
@@ -423,28 +430,30 @@ namespace ToDoList
             // allTabPage
             // 
             this.allTabPage.Controls.Add(this.tasksAllDG);
-            this.allTabPage.Location = new System.Drawing.Point(4, 22);
-            this.allTabPage.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.allTabPage.Location = new System.Drawing.Point(4, 25);
+            this.allTabPage.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.allTabPage.Name = "allTabPage";
-            this.allTabPage.Size = new System.Drawing.Size(635, 444);
+            this.allTabPage.Size = new System.Drawing.Size(849, 549);
             this.allTabPage.TabIndex = 2;
             this.allTabPage.Text = "Список задач";
             this.allTabPage.UseVisualStyleBackColor = true;
             // 
-            // TasksForm
+            // Form1
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.SeaShell;
-            this.ClientSize = new System.Drawing.Size(825, 492);
+            this.ClientSize = new System.Drawing.Size(1078, 605);
             this.Controls.Add(this.tasksTC);
             this.Controls.Add(this.closeTaskBtn);
             this.Controls.Add(this.taskEditBtn);
             this.Controls.Add(this.deleteTaskBtn);
             this.Controls.Add(this.addTaskBtn);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedDialog;
+            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.MaximizeBox = false;
-            this.Name = "TasksForm";
+            this.Name = "Form1";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Задачи";
             this.Load += new System.EventHandler(this.tasksForm_Load);
             ((System.ComponentModel.ISupportInitialize)(this.tasksAllDG)).EndInit();
