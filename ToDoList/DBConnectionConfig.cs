@@ -8,10 +8,10 @@ namespace ToDoList
 {
     public class DBConnectionConfig
     {
-        public static string host = "localhost";
+        public static string host = "default";
         public static int port = 3306;
-        public static string database = "task_manager";
-        public static string username = "root";
-        public static string password = "root";
+        public static string database = "default";
+        public static string username = "default";
+        public static string password = "default";
     }
 }
